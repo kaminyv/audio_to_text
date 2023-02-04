@@ -1,7 +1,7 @@
 {% extends 'base_template.html' %}
 
 {% block content %}
-<form action="/">
+<form action="/" method="post">
     {% csrf_token %}
     <input name="url" type="url" placeholder="Past link YouTube" value="{% if url %}{{ url }}{% endif %}"/>
     <input name="past_btn" type="button" value="Past link" />

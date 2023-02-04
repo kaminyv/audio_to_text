@@ -1,4 +1,6 @@
 from __future__ import unicode_literals
+
+import os
 import subprocess
 import youtube_dl
 import speech_recognition as sr
@@ -49,6 +51,8 @@ def audio_in_text(path: str = None):
 def main(url: str = None):
     file = youtube_in_audio(url)
     text = audio_in_text(file)
+    os.remove(file)
+    os.remove(file.replace('.wav', '.webm'))
 
     return text
 
