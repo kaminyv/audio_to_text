@@ -1,0 +1,7 @@
+Django==4.1.6
+django_debug_toolbar==3.8.1
+SpeechRecognition==3.9.0
+torch==1.13.1
+transformers==4.26.0
+youtube-dl==2021.12.17
+vosk==0.3.45

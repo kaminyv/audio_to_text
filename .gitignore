@@ -130,3 +130,7 @@ dmypy.json
 
 # IDEA
 .idea/
+
+# Model for AI
+model/
+recasepunc/
