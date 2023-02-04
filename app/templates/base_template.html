@@ -3,10 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <meta name="description" content="Audio to Text">
+    <meta name="author" content="kaminyv">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {% load static %}
+    <link rel="icon" href="{% static 'app/img/favicon.png' %}" type="image/png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'app/css/reset.css' %}">
+    <link rel="stylesheet" href="{% static 'app/css/style.css' %}">
+
+
 </head>
 <body>
-<header></header>
-<main>{% block content %}{% endblock %}</main>
-<footer></footer>
+<header class="header">
+    <div class="wrapper">
+        <h1 class="brand">Audio to Text</h1>
+    </div>
+</header>
+<main class="main">
+    <div class="wrapper">
+        {% block content %}{% endblock %}
+    </div>
+</main>
+<footer class="footer">
+    <div class="wrapper">
+        <p>footer</p>
+    </div>
+</footer>
+
+<script src="{% static 'app/js/app.js' %}"></script>
 </body>
 </html>

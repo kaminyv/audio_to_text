@@ -1,5 +1,12 @@
 {% extends 'base_template.html' %}
 
 {% block content %}
-<h1>Test Block</h1>
+<form action="/">
+    {% csrf_token %}
+    <input name="url" type="url" placeholder="Past link YouTube" value="{% if url %}{{ url }}{% endif %}"/>
+    <input name="past_btn" type="button" value="Past link" />
+    <input type="submit" value="Recognize" />
+    <textarea name="recognize_text" readonly>{% if recognize_text %}{{ recognize_text }}{% endif %}</textarea>
+    <input name="copy_btn" type="button" value="Copy in clipboard" />
+</form>
 {% endblock %}
